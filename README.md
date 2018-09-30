@@ -97,3 +97,45 @@ npm i marked --save
 ```js
 marked("#标题");
 ```
+
+# 代码高亮
+
+```js
+npm i highlight.js --save
+```
+
+`highlight.js`的`.js`不能少
+
+- 使用方法
+
+```js
+<script>
+import hljs from "highlight.js";
+import "highlight.js/styles/googlecode.css";
+
+const highlightCode = () => {
+  const preEl = document.querySelectorAll("pre");
+  preEl.forEach(el => {
+    hljs.highlightBlock(el);
+  });
+};
+
+export default {
+  name:'test',
+  data() {
+    return {
+
+    };
+  },
+  mounted() {
+    highlightCode();
+  },
+  updated() {
+    highlightCode();
+  },
+  components: {
+    Upload
+  }
+};
+</script>
+```

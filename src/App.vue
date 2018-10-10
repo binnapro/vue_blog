@@ -55,7 +55,10 @@ html {
 .subCenter {
   align-items: center;
 }
-.flex1{
+.flexWrap {
+  flex-wrap: wrap;
+}
+.flex1 {
   flex: 1;
 }
 </style>

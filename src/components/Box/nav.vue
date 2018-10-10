@@ -5,7 +5,7 @@
     </div>
     <div class="right row subCenter">
       <div v-for="(item,index) in menu" :key="index" class="item">
-        <span>{{item.title}}</span>
+        <span @click="go(item)">{{item.title}}</span>
       </div>
     </div>
   </div>
@@ -18,7 +18,11 @@ export default {
   props: ["relative"],
   data() {
     return {
-      menu: [{ title: "Home" }, { title: "Tags" }, { title: "About me" }]
+      menu: [
+        { title: "Home", link: "Home" },
+        { title: "Tags", link: "Tag", params: "all" },
+        { title: "About me", link: "Me" }
+      ]
     };
   },
   components: {},
@@ -26,6 +30,15 @@ export default {
     getBoxClass() {
       let base = "nav row mainBetween subCenter";
       return this.relative === undefined ? base : base + " navs";
+    }
+  },
+  methods: {
+    go(item) {
+      if (item.params) {
+        this.$router.push({ name: item.link, params: { id: item.params } });
+      } else {
+        this.$router.push({ name: item.link });
+      }
     }
   }
 };

@@ -41,10 +41,10 @@ npm install babel-plugin-component -D
 
 ```js
 npm i markdown-loader --save
-npm i html-loader --save
+npm i html-loader --save
 ```
 
-在 build/utils 文件的 styleLoaders 函数末尾中添加一段代码
+在 build/utils 文件的styleLoaders函数末尾中添加一段代码
 
 ```js
 output.push({
@@ -75,7 +75,7 @@ output.push({
 
 ```js
 <script>
-  import result from '../../test.md';
+  import result from '../../test.md';
   export default {
     data() {
       return {

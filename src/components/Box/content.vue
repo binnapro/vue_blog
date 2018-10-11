@@ -6,7 +6,7 @@
     <div class="right">
       <div class="title">FEATURED TAGS</div>
       <div class="row flexWrap feature-tags">
-        <div class="tag" v-for="(item, index) in tag" :key="index">{{item.tag}}</div>
+        <div class="tag" v-for="(item, index) in tag" :key="index" @click="goTag(item.tag)">{{item.tag}}</div>
       </div>
       <div class="title">ABOUT ME</div>
       <div class="about-me">
@@ -33,7 +33,12 @@ export default {
       this.tag = e;
     });
   },
-  components: {}
+  components: {},
+  methods: {
+    goTag(id) {
+      this.$router.push({ name: "Tag", params: { id } });
+    }
+  }
 };
 </script>
 

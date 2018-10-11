@@ -1,6 +1,6 @@
 <template>
   <div :class="getBoxClass">
-    <div class="left">
+    <div class="left" @click="go({link:'Home'})">
       Binna blog
     </div>
     <div class="right row subCenter">
@@ -22,7 +22,7 @@ export default {
         { title: "Home", link: "Home" },
         { title: "Tags", link: "Tag", params: "all" },
         { title: "About me", link: "Me" }
-      ]
+      ],
     };
   },
   components: {},

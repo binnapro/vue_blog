@@ -1,5 +1,6 @@
 <template>
-  <div class="">
+  <div class="row subCenter" style="padding-bottom:20px;">
+    <div class="inputTag">标签</div>
     <Tag :key="index" v-for="(item,index) in tags" closable :disable-transitions="false" @close="handleClose(item,index)">
       {{item}}
     </Tag>
@@ -67,5 +68,11 @@ export default {
   width: 90px;
   margin-left: 10px;
   vertical-align: bottom;
+}
+.inputTag {
+  width: 50px;
+  margin-left: 10px;
+  text-align: right;
+  margin-right: 10px;
 }
 </style>

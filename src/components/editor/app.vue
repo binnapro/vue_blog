@@ -19,15 +19,21 @@ export default {
   },
   methods: {
     getValue() {
-      console.log(editor2.txt.html());
+      this.$emit("handleContent", editor2.txt.html());
     }
   }
 };
 </script>
 
 <style>
+#wangeditor .w-e-toolbar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
 #wangeditor .w-e-text-container {
   height: 550px !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 </style>
 

@@ -44,7 +44,7 @@ npm i markdown-loader --save
 npm i html-loader --save
 ```
 
-在 build/utils 文件的styleLoaders函数末尾中添加一段代码
+在 build/utils 文件的styleLoaders函数末尾中添加一段代码
 
 ```js
 output.push({

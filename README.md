@@ -1,3 +1,11 @@
+# 功能演示
+
+![dd](./all.gif)
+
+# 上传演示
+
+![dd](./upload.gif)
+
 # vue-cli 快速安装
 
 ```

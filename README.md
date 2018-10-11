@@ -40,7 +40,7 @@ npm install babel-plugin-component -D
 文件引入需要 loader, 这里使用 markdown-loader 和 html-loader
 
 ```js
-npm i markdown-loader --save
+npm i markdown-loader --save
 npm i html-loader --save
 ```
 
@@ -63,7 +63,7 @@ output.push({
 )}
 ```
 
-配置完成  之后, 正常引入即可获取解析之后的 html
+配置完成之后, 正常引入即可获取解析之后的 html
 
 ```js
 <template>
@@ -79,7 +79,7 @@ output.push({
   export default {
     data() {
       return {
-        result
+        result
       };
     }
   };
@@ -88,7 +88,7 @@ output.push({
 
 # 解析 markdown 数据
 
-将 `#标题` 解析成 `<h1>标题</h1>`, 需要引入  一个新的包 marked
+将 `#标题` 解析成 `<h1>标题</h1>`, 需要引入一个新的包 marked
 
 ```js
 npm i marked --save
@@ -101,7 +101,7 @@ marked("#标题");
 # 代码高亮
 
 ```js
-npm i highlight.js --save
+npm i highlight.js --save
 ```
 
 `highlight.js`的`.js`不能少

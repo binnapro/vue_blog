@@ -21,7 +21,7 @@ export default {
       menu: [
         { title: "Home", link: "Home" },
         { title: "Tags", link: "Tag", params: "all" },
-        { title: "About me", link: "Me" }
+        { title: "About Me", link: "Me" }
       ],
     };
   },
